@@ -22,7 +22,7 @@ def rmsEnergy(wave_data) :
  
  
  
-f=wave.open("C:/Users/Admin/Anaconda3/Lib/delme_rec_unlimited_ian0oqjd.wav","rb")
+f=wave.open("C:/Users/Admin/Anaconda3/Lib/output.wav","rb")
 # getparams() 一time of return format information for all of the WAV files
 params = f.getparams()
 # nframes sampling points
@@ -54,4 +54,8 @@ pl.xlabel("time (seconds)")
 pl.show()
  
  
-print("Short-term energy：",energy)
+#print("Short-term energy：",energy)
+
+a = np.array([energy])
+b = np.mean(a)
+print("Mean energy：",b)
